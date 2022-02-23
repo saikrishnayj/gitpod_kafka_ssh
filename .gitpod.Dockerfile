@@ -1,4 +1,4 @@
-FROM ubuntu:lates
+FROM ubuntu:latest
 
 RUN mkdir -p /var/run/sshd
 RUN apt-get update && apt-get install -y openjdk-8-jdk openssh-server
