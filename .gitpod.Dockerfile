@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN mkdir -p /var/run/sshd
 RUN apt-get update && apt-get install -y openjdk-8-jdk ca-certificates openssh-server iputils-ping curl apt-transport-https lsb-release gnupg git && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
