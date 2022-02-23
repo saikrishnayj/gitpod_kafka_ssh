@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y openjdk-8-jdk openssh-server
 
 USER gitpod
 
-RUN mkdir /home/gitpod/.ssh && chmod 700 /home/gitpod/.ssh
+RUN mkdir -p /home/gitpod/.ssh && chmod 700 /home/gitpod/.ssh
 
 COPY .pub /home/gitpod/.ssh/authorized_keys
 
